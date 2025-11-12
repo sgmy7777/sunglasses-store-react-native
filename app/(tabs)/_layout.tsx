@@ -1,4 +1,3 @@
-import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Tabs } from 'expo-router';
 import Svg, { Path } from 'react-native-svg';
 
@@ -7,7 +6,22 @@ export default function TabLayout() {
     <Tabs>
       <Tabs.Screen name="index" options={{
         title: 'Home',
-        tabBarIcon: ({ color }) => <FontAwesome size={24} name="home" color={color} />,
+        tabBarIcon: ({ color }) => <Svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <Path
+            d="M3 9L12 3L21 9V21C21 21.5304 20.7893 22.0391 20.4142 22.4142C20.0391 22.7893 19.5304 23 19 23H5C4.46957 23 3.96086 22.7893 3.58579 22.4142C3.21071 22.0391 3 21.5304 3 21V9Z"
+            stroke={color}
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <Path
+            d="M9 23V13H15V23"
+            stroke={color}
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </Svg>,
       }} />
       <Tabs.Screen name="categories/index" options={{
         title: 'Categories',
@@ -23,11 +37,48 @@ export default function TabLayout() {
       }} />
       <Tabs.Screen name="cart/index" options={{
         title: 'Cart',
-        tabBarIcon: ({ color }) => <FontAwesome size={24} name="shopping-cart" color={color} />,
+        tabBarIcon: ({ color }) => <Svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <Path
+            d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.2637 8.38787 15.5583C8.75382 15.8529 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3262 15.8529 20.6921 15.5583C21.0581 15.2637 21.3086 14.8504 21.4 14.39L23 6H6"
+            stroke={color}
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <Path
+            d="M9 20C9.55228 20 10 20.4477 10 21C10 21.5523 9.55228 22 9 22C8.44772 22 8 21.5523 8 21C8 20.4477 8.44772 20 9 20Z"
+            stroke={color}
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <Path
+            d="M20 20C20.5523 20 21 20.4477 21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20Z"
+            stroke={color}
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </Svg>,
       }} />
       <Tabs.Screen name="account/index" options={{
         title: 'Account',
-        tabBarIcon: ({ color }) => <FontAwesome size={24} name="user" color={color} />,
+        tabBarIcon: ({ color }) => <Svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <Path
+            d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21"
+            stroke={color}
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <Path
+            d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
+            stroke={color}
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </Svg>,
       }} />
     </Tabs>
   );
