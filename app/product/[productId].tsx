@@ -34,7 +34,7 @@ export default function ProductScreen() {
       <View style={styles.imageContainer}>
         {product.image ? (
           <Image
-            source={{ uri: product.image }}
+            source={typeof product.image === 'string' ? { uri: product.image } : product.image}
             style={styles.image}
             placeholder="PLACEHOLDER"
           />
